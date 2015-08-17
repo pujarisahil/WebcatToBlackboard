@@ -66,6 +66,7 @@ public class FileChosingWebcat extends javax.swing.JFrame {
 			files = chooser.getSelectedFiles();
 			if(files.length >= 1) {
 				MainScreen.check = true;
+				check = true;
 			}
 			dispose();
 				
@@ -92,4 +93,5 @@ public class FileChosingWebcat extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     // End of variables declaration       
     protected static File[] files;
+    protected static boolean check = false;
 }

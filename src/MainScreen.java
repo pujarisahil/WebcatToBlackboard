@@ -50,9 +50,9 @@ public class MainScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Change Me");
-
-        jLabel5.setText("Change Me 2");
+        jLabel4.setText("        ");
+//
+        jLabel5.setText("          ");
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton3.setText("Convert");
@@ -138,6 +138,10 @@ public class MainScreen extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainScreen().setVisible(true);
+                //if(FileChosingBB.check == true || FileChosingWebcat.check == true) {
+                //	System.out.println("I was here");
+                //	jLabel4.setText("Done");
+                //}
             }
         });
     }
@@ -149,7 +153,7 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    protected static javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     // End of variables declaration
     protected static boolean check = false;
