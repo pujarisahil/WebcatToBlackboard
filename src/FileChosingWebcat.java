@@ -66,7 +66,9 @@ public class FileChosingWebcat extends javax.swing.JFrame {
 			files = chooser.getSelectedFiles();
 			if(files.length >= 1) {
 				MainScreen.check = true;
+				System.out.println(Arrays.toString(files));
 				check = true;
+				MainScreen.update2("Done");
 			}
 			dispose();
 				

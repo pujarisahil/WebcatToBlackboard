@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.Arrays;
 
 import javax.swing.JFileChooser;
 
@@ -25,7 +26,8 @@ public class FileChosingBB extends javax.swing.JFrame {
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-		jFileChooser1.setMultiSelectionEnabled(false);
+		
+		//jFileChooser1.setMultiSelectionEnabled(true);
 		jFileChooser1.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				jFileChooser1ActionPerformed(evt);
@@ -60,22 +62,24 @@ public class FileChosingBB extends javax.swing.JFrame {
 		pack();
 	}// </editor-fold>
 
-	private void jFileChooser1ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jFileChooser1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
 		JFileChooser chooser = (JFileChooser) evt.getSource();
 		if (JFileChooser.APPROVE_SELECTION.equals(evt.getActionCommand())) {
-			files = chooser.getSelectedFiles();
-			if(files.length == 1) {
+			// Open or Save was clicked
+			files = chooser.getSelectedFile();
+			if(files.length() >= 1) {
 				MainScreen.check = true;
-				
-				MainScreen.jLabel4.setText("Done");
+				MainScreen.update1("Done");
+				System.out.println(files);
+				check = true;
 			}
 			dispose();
 				
 		} else if (JFileChooser.CANCEL_SELECTION.equals(evt.getActionCommand())) {
 			dispose();
 		}
-	}
+    }     
 
 	/**
 	 * @param args
@@ -95,6 +99,6 @@ public class FileChosingBB extends javax.swing.JFrame {
 	private static javax.swing.JFileChooser jFileChooser1;
 	private javax.swing.JLabel jLabel1;
 	// End of variables declaration
-	protected static File[] files;
+	protected static File files;
 	protected static boolean check = false;
 }

@@ -50,7 +50,7 @@ public class MainScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("        ");
+        jLabel4.setText(text1);
 //
         jLabel5.setText("          ");
 
@@ -125,8 +125,17 @@ public class MainScreen extends javax.swing.JFrame {
     	FileChosingWebcat.main(args);
     }                                        
 
+    protected static void update1(String something) {
+    	jLabel4.setText(something);
+    }
+    
+    protected static void update2(String something) {
+    	jLabel5.setText(something);
+    }
+    
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
+    	System.out.println(text1);
     }                                        
 
     /**
@@ -153,8 +162,9 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    protected static String text1 = "";
     protected static javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    protected static javax.swing.JLabel jLabel5;
     // End of variables declaration
     protected static boolean check = false;
 }
