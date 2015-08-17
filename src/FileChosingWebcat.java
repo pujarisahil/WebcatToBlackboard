@@ -1,9 +1,9 @@
-public class FileChosing extends javax.swing.JFrame {
+public class FileChosingWebcat extends javax.swing.JFrame {
 
     /**
      * Creates new form FileChosing
      */
-    public FileChosing() {
+    public FileChosingWebcat() {
         initComponents();
     }
 
@@ -65,7 +65,7 @@ public class FileChosing extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FileChosing().setVisible(true);
+                new FileChosingWebcat().setVisible(true);
             }
         });
     }
