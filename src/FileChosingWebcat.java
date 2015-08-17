@@ -1,3 +1,8 @@
+import java.io.File;
+import java.util.Arrays;
+
+import javax.swing.JFileChooser;
+
 public class FileChosingWebcat extends javax.swing.JFrame {
 
     /**
@@ -55,6 +60,18 @@ public class FileChosingWebcat extends javax.swing.JFrame {
 
     private void jFileChooser1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+		JFileChooser chooser = (JFileChooser) evt.getSource();
+		if (JFileChooser.APPROVE_SELECTION.equals(evt.getActionCommand())) {
+			// Open or Save was clicked
+			files = chooser.getSelectedFiles();
+			if(files.length >= 1) {
+				MainScreen.check = true;
+			}
+			dispose();
+				
+		} else if (JFileChooser.CANCEL_SELECTION.equals(evt.getActionCommand())) {
+			dispose();
+		}
     }                                             
 
     /**
@@ -73,5 +90,6 @@ public class FileChosingWebcat extends javax.swing.JFrame {
     // Variables declaration - do not modify                     
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
-    // End of variables declaration                   
+    // End of variables declaration       
+    protected static File[] files;
 }

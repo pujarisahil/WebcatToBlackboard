@@ -151,5 +151,6 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    // End of variables declaration                   
+    // End of variables declaration
+    protected static boolean check = false;
 }
