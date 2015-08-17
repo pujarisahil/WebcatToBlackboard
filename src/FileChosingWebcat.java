@@ -71,7 +71,7 @@ public class FileChosingWebcat extends javax.swing.JFrame {
             public void run() {
                 new FileChosingWebcat().setVisible(true);
             }
-        });
+        }); 
     }
                      
     private javax.swing.JFileChooser jFileChooser1;
