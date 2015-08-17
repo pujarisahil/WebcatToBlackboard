@@ -115,12 +115,14 @@ public class MainScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>                        
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                  
+    	String[] args = {};
+    	FileChosingBB.main(args);
     }                                        
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) { 
+    	String[] args = {};
+    	FileChosingWebcat.main(args);
     }                                        
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
